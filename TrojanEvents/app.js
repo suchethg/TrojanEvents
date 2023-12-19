@@ -32,7 +32,7 @@ app.use(
   })
 );
 
-mongoose.connect(`mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster0.mfaks3m.mongodb.net/events-react-dev?retryWrites=true&w=majority`).then(
+mongoose.connect(`mongodb+srv://mainUser:S5GTGKxDzMFsjK7I@cluster0.mfaks3m.mongodb.net/events-react-dev?retryWrites=true&w=majority`).then(
 ()=>{
 app.listen(8000);
 }
