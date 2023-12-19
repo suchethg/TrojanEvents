@@ -13,7 +13,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: '*',
+    origin: 'https://trojan-events.vercel.app/',
     methods: ['POST', 'GET', 'OPTIONS'],
     credentials: true,
     allowedHeaders: ['Content-Type', 'Authorization'],
