@@ -11,13 +11,14 @@ const isAuth = require('./middleware/is-auth');
 
 const app = express();
 
-app.use(cors(
-  {
-    origin:[""],
-    methods:["POST","GET"],
-    credentials:true
-  }
-))
+app.use(
+  cors({
+    origin: '*',
+    methods: ['POST', 'GET', 'OPTIONS'],
+    credentials: true,
+    allowedHeaders: ['Content-Type', 'Authorization'],
+  })
+);
 app.use(bodyParser.json());
 app.use(isAuth);
 app.use((req, res, next) => {
